@@ -973,7 +973,7 @@ while [ ${#} -gt 0 ]; do
 	shift 1
 done
 
-while [ "$go" != 'y' ] && [ "$go" != 'n' ]
+# while [ "$go" != 'y' ] && [ "$go" != 'n' ]
 # do
 # 	read -p "Do you want to install Bt-Panel to the $setup_path directory now?(y/n): " go;
 # done
