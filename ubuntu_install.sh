@@ -978,11 +978,9 @@ while [ "$go" != 'y' ] && [ "$go" != 'n' ]
 # 	read -p "Do you want to install Bt-Panel to the $setup_path directory now?(y/n): " go;
 # done
 
-go = 'y';
-
-if [ "$go" == 'n' ];then
-	exit;
-fi
+# if [ "$go" == 'n' ];then
+# 	exit;
+# fi
 
 ARCH_LINUX=$(cat /etc/os-release |grep "Arch Linux")
 if [ "${ARCH_LINUX}" ] && [ -f "/usr/bin/pacman" ];then
