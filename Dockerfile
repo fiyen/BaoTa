@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
-RUN mk /etc/redhat-release
+RUN mkdir -p /etc/redhat-release
 
 RUN apt-get update && apt-get install -y wget sudo
 
