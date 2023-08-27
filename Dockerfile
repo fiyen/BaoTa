@@ -4,6 +4,6 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y wget sudo
 
-RUN wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh
+COPY ubuntu_install.sh /app/ubuntu_install.sh
 
-CMD ["/bin/bash","/app/install.sh"]
+CMD ["/bin/bash","/app/ubuntu_install.sh"]
