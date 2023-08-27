@@ -351,17 +351,17 @@ Install_Deb_Pack(){
 	fi
 	apt-get install ruby -y
 	apt-get install lsb-release -y
-	apt-get install ntp ntpdate -y
-	/etc/init.d/ntp stop
-	update-rc.d ntp remove
-	cat >>~/.profile
-	TZ='Asia/Shanghai'; export TZ
-	EOF
-	rm -rf /etc/localtime
-	cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-	echo 'Synchronizing system time...'
-	ntpdate 0.asia.pool.ntp.org
-	apt-get upgrade -y
+	#apt-get install ntp ntpdate -y
+	#/etc/init.d/ntp stop
+	#update-rc.d ntp remove
+	#cat >>~/.profile<<EOF
+	#TZ='Asia/Shanghai'; export TZ
+	#EOF
+	#rm -rf /etc/localtime
+	#cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+	#echo 'Synchronizing system time...'
+	#ntpdate 0.asia.pool.ntp.org
+	#apt-get upgrade -y
 	LIBCURL_VER=$(dpkg -l|grep libcurl4|awk '{print $3}')
 	if [ "${LIBCURL_VER}" == "7.68.0-1ubuntu2.8" ];then
 		apt-get remove libcurl4 -y
