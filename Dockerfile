@@ -1,9 +1,5 @@
-FROM centos:latest
+FROM ubuntu:latest
 
 WORKDIR /app
 
-RUN yum install -y wget
-
-COPY . /app/.
-
-RUN sh install.sh
+RUN wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh
